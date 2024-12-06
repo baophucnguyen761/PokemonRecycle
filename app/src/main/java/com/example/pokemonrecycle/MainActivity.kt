@@ -2,7 +2,6 @@ package com.example.pokemonrecycle
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -84,8 +83,18 @@ class MainActivity : AppCompatActivity() {
                     val jsonObject: JSONObject = json.jsonObject
                     val imageUrl = jsonObject.getJSONObject("sprites").getString("front_default")
 
-                    // Add the Pokémon with name and image URL to the list
-                    val pokemon = PokemonDetails(name, imageUrl)
+                    // Fetch type information
+                    val typesArray = jsonObject.getJSONArray("types")
+                    val typeList = mutableListOf<String>()
+                    for (i in 0 until typesArray.length()) {
+                        val typeObject = typesArray.getJSONObject(i)
+                        val typeName = typeObject.getJSONObject("type").getString("name")
+                        typeList.add(typeName)
+                    }
+                    val type = typeList.joinToString(", ")
+
+                    // Add the Pokémon with name, image URL, and type to the list
+                    val pokemon = PokemonDetails(name, imageUrl, type)
                     pokemonList.add(pokemon)
 
                     // Notify the adapter of the data change
