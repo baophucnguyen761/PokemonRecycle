@@ -35,7 +35,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />[https://www.loom.com/share/23fed687c51240e2a61f32adff245520?sid=14fd9d47-f18c-43cf-96f3-296f6fbec296](https://giphy.com/gifs/wNwX36NfBnH9Gn34jx)
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />(https://giphy.com/gifs/wNwX36NfBnH9Gn34jx)
 
 GIF created with **ScreenToGif**
 
